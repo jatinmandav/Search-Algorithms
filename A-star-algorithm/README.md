@@ -3,7 +3,7 @@
 In computer science, A* (pronounced as "A star") is a computer algorithm that is widely used in pathfinding and graph traversal, the process of plotting an efficiently directed path between multiple points, called "nodes". It enjoys widespread use due to its performance and accuracy. However, in practical travel-routing systems, it is generally outperformed by algorithms which can pre-process the graph to attain better performance, although other work has found A* to be superior to other approaches.
 
 # Pseudo-Code (Source: [Wiki/a-star-algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm)):
-function A*(start, goal)
+    function A*(start, goal)
     // The set of nodes already evaluated
     closedSet := {}
 
@@ -57,12 +57,12 @@ function A*(start, goal)
 
     return failure
 
-function reconstruct_path(cameFrom, current)
-    total_path := [current]
-    while current in cameFrom.Keys:
-        current := cameFrom[current]
-        total_path.append(current)
-    return total_path
+    function reconstruct_path(cameFrom, current)
+        total_path := [current]
+        while current in cameFrom.Keys:
+            current := cameFrom[current]
+            total_path.append(current)
+        return total_path
    
 Below is demo of of A* algorithm in action:
 
